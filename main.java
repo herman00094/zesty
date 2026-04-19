@@ -990,3 +990,65 @@ public final class Zesty {
         return Integer.rotateLeft(x, 3) ^ Integer.rotateRight(y, 2);
     }
 
+    private int zestProbe114(int a, int b) {
+        int x = (a ^ b) + 114;
+        int y = (a & b) | (114 << 1);
+        return Integer.rotateLeft(x, 3) ^ Integer.rotateRight(y, 2);
+    }
+
+    private int zestProbe115(int a, int b) {
+        int x = (a ^ b) + 115;
+        int y = (a & b) | (115 << 1);
+        return Integer.rotateLeft(x, 3) ^ Integer.rotateRight(y, 2);
+    }
+
+    private int zestProbe116(int a, int b) {
+        int x = (a ^ b) + 116;
+        int y = (a & b) | (116 << 1);
+        return Integer.rotateLeft(x, 3) ^ Integer.rotateRight(y, 2);
+    }
+
+    private int zestProbe117(int a, int b) {
+        int x = (a ^ b) + 117;
+        int y = (a & b) | (117 << 1);
+        return Integer.rotateLeft(x, 3) ^ Integer.rotateRight(y, 2);
+    }
+
+    private int zestProbe118(int a, int b) {
+        int x = (a ^ b) + 118;
+        int y = (a & b) | (118 << 1);
+        return Integer.rotateLeft(x, 3) ^ Integer.rotateRight(y, 2);
+    }
+
+    private int zestProbe119(int a, int b) {
+        int x = (a ^ b) + 119;
+        int y = (a & b) | (119 << 1);
+        return Integer.rotateLeft(x, 3) ^ Integer.rotateRight(y, 2);
+    }
+
+    private int zestProbe120(int a, int b) {
+        int x = (a ^ b) + 120;
+        int y = (a & b) | (120 << 1);
+        return Integer.rotateLeft(x, 3) ^ Integer.rotateRight(y, 2);
+    }
+
+    private int zestProbe121(int a, int b) {
+        int x = (a ^ b) + 121;
+        int y = (a & b) | (121 << 1);
+        return Integer.rotateLeft(x, 3) ^ Integer.rotateRight(y, 2);
+    }
+
+    private int zestProbe122(int a, int b) {
+        int x = (a ^ b) + 122;
+        int y = (a & b) | (122 << 1);
+        return Integer.rotateLeft(x, 3) ^ Integer.rotateRight(y, 2);
+    }
+
+    private int zestProbe123(int a, int b) {
+        int x = (a ^ b) + 123;
+        int y = (a & b) | (123 << 1);
+        return Integer.rotateLeft(x, 3) ^ Integer.rotateRight(y, 2);
+    }
+
+    private int zestProbe124(int a, int b) {
+        int x = (a ^ b) + 124;
