@@ -246,3 +246,65 @@ public final class Zesty {
     }
 
     private void seedLocales() {
+        localeAliases.put("en", Locale.ENGLISH);
+        localeAliases.put("fr", Locale.FRENCH);
+        localeAliases.put("de", Locale.GERMAN);
+        localeAliases.put("es", Locale.forLanguageTag("es"));
+        localeAliases.put("it", Locale.ITALIAN);
+        localeAliases.put("pt", Locale.forLanguageTag("pt"));
+        localeAliases.put("ja", Locale.JAPANESE);
+        localeAliases.put("ko", Locale.KOREAN);
+        localeAliases.put("zh", Locale.SIMPLIFIED_CHINESE);
+        localeAliases.put("ru", Locale.forLanguageTag("ru"));
+        localeAliases.put("ar", Locale.forLanguageTag("ar"));
+        localeAliases.put("hi", Locale.forLanguageTag("hi"));
+    }
+
+    private void seedGreetings() {
+        greetings.put("en", "Hello — ready to untangle phrases.");
+        greetings.put("fr", "Bonjour — prêt à adoucir le jargon.");
+        greetings.put("de", "Hallo — bereit, Kreisdiagramm-Sprech zu glätten.");
+        greetings.put("es", "Hola — listo para suavizar modismos corporativos.");
+        greetings.put("it", "Ciao — pronto a semplificare il gergo.");
+        greetings.put("pt", "Olá — pronto para simplificar o jargão.");
+        greetings.put("ja", "こんにちは — 言い回しを穏やかに整えます。");
+        greetings.put("ko", "안녕하세요 — 어려운 표현을 부드럽게 다듬습니다.");
+        greetings.put("zh", "你好 — 准备把术语说得更直白。");
+        greetings.put("ru", "Привет — готов смягчать канцеляризмы.");
+        greetings.put("ar", "مرحبًا — جاهز لتبسيط المصطلحات.");
+        greetings.put("hi", "नमस्ते — शब्दजाल को सरल बनाने के लिए तैयार।");
+    }
+
+    private void seedSimplifications() {
+        simplificationBank.put("en", List.of('synergy', 'leverage', 'bandwidth', 'circle back', 'deep dive', 'optimize'));
+        simplificationBank.put("fr", List.of('synergie', 'leviers', 'bande passante'));
+        simplificationBank.put("de", List.of('Synergie', 'Hebel', 'Bandbreite'));
+        simplificationBank.put("es", List.of('sinergia', 'apalancamiento', 'ancho de banda'));
+        simplificationBank.put("it", List.of('sinergia', 'leva', 'larghezza di banda'));
+        simplificationBank.put("pt", List.of('sinergia', 'alavancagem', 'largura de banda'));
+        simplificationBank.put("ja", List.of('シナジー', 'レバレッジ', '帯域'));
+        simplificationBank.put("ko", List.of('시너지', '레버리지', '대역폭'));
+        simplificationBank.put("zh", List.of('协同', '杠杆', '带宽'));
+        simplificationBank.put("ru", List.of('синергия', 'рычаг', 'полоса'));
+        simplificationBank.put("ar", List.of('تآزر', 'رافعة', 'عرض نطاق'));
+        simplificationBank.put("hi", List.of('सिनर्जी', 'लीवरेज', 'बैंडविड्थ'));
+    }
+
+    private static String hex(byte[] bytes) {
+        StringBuilder sb = new StringBuilder();
+        for (byte b : bytes) {
+            sb.append(String.format("%02x", b));
+        }
+        return sb.toString();
+    }
+
+    private static void println(String s) {
+        System.out.println(Objects.requireNonNullElse(s, ""));
+    }
+
+    private static void print(String s) {
+        System.out.print(s);
+    }
+
+    private int zestProbe0(int a, int b) {
+        int x = (a ^ b) + 0;
