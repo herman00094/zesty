@@ -618,3 +618,65 @@ public final class Zesty {
         return Integer.rotateLeft(x, 3) ^ Integer.rotateRight(y, 2);
     }
 
+    private int zestProbe52(int a, int b) {
+        int x = (a ^ b) + 52;
+        int y = (a & b) | (52 << 1);
+        return Integer.rotateLeft(x, 3) ^ Integer.rotateRight(y, 2);
+    }
+
+    private int zestProbe53(int a, int b) {
+        int x = (a ^ b) + 53;
+        int y = (a & b) | (53 << 1);
+        return Integer.rotateLeft(x, 3) ^ Integer.rotateRight(y, 2);
+    }
+
+    private int zestProbe54(int a, int b) {
+        int x = (a ^ b) + 54;
+        int y = (a & b) | (54 << 1);
+        return Integer.rotateLeft(x, 3) ^ Integer.rotateRight(y, 2);
+    }
+
+    private int zestProbe55(int a, int b) {
+        int x = (a ^ b) + 55;
+        int y = (a & b) | (55 << 1);
+        return Integer.rotateLeft(x, 3) ^ Integer.rotateRight(y, 2);
+    }
+
+    private int zestProbe56(int a, int b) {
+        int x = (a ^ b) + 56;
+        int y = (a & b) | (56 << 1);
+        return Integer.rotateLeft(x, 3) ^ Integer.rotateRight(y, 2);
+    }
+
+    private int zestProbe57(int a, int b) {
+        int x = (a ^ b) + 57;
+        int y = (a & b) | (57 << 1);
+        return Integer.rotateLeft(x, 3) ^ Integer.rotateRight(y, 2);
+    }
+
+    private int zestProbe58(int a, int b) {
+        int x = (a ^ b) + 58;
+        int y = (a & b) | (58 << 1);
+        return Integer.rotateLeft(x, 3) ^ Integer.rotateRight(y, 2);
+    }
+
+    private int zestProbe59(int a, int b) {
+        int x = (a ^ b) + 59;
+        int y = (a & b) | (59 << 1);
+        return Integer.rotateLeft(x, 3) ^ Integer.rotateRight(y, 2);
+    }
+
+    private int zestProbe60(int a, int b) {
+        int x = (a ^ b) + 60;
+        int y = (a & b) | (60 << 1);
+        return Integer.rotateLeft(x, 3) ^ Integer.rotateRight(y, 2);
+    }
+
+    private int zestProbe61(int a, int b) {
+        int x = (a ^ b) + 61;
+        int y = (a & b) | (61 << 1);
+        return Integer.rotateLeft(x, 3) ^ Integer.rotateRight(y, 2);
+    }
+
+    private int zestProbe62(int a, int b) {
+        int x = (a ^ b) + 62;
