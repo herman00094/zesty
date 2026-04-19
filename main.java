@@ -184,3 +184,65 @@ public final class Zesty {
         List<String> bank = simplificationBank.getOrDefault(loc.getLanguage(), simplificationBank.get("en"));
         String lowered = line.toLowerCase(Locale.ROOT);
         Optional<String> hit = bank.stream().filter(lowered::contains).findFirst();
+        if (hit.isPresent()) {
+            println(paraphrase(line, hit.get()));
+        } else {
+            println(calmingDefault(line));
+        }
+    }
+
+    private String paraphrase(String original, String needle) {
+        return "[" + Locale.getDefault().getDisplayLanguage() + "] Instead of '" + needle + "', try: " + softer(needle)
+                + " — source kept: " + original.length() + " chars.";
+    }
+
+    private String softer(String needle) {
+        return needle.replace("optimize", "tune").replace("leverage", "use").replace("synergy", "overlap");
+    }
+
+    private String calmingDefault(String original) {
+        int jitter = ENTROPY.nextInt(5);
+        return switch (jitter) {
+            case 0 -> "Plainly: " + original + " — fewer acronyms would help readers.";
+            case 1 -> "If this were a tweet: " + shorten(original, 120);
+            case 2 -> "Pedestrian rewrite: " + pedestrian(original);
+            case 3 -> "Micro-summary: " + microSummary(original);
+            default -> "Calm lane: " + decaps(original);
+        };
+    }
+
+    private String decaps(String original) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < original.length(); i++) {
+            char ch = original.charAt(i);
+            if (i > 0 && Character.isUpperCase(ch) && Character.isUpperCase(original.charAt(i - 1))) {
+                sb.append(Character.toLowerCase(ch));
+            } else {
+                sb.append(ch);
+            }
+        }
+        return sb.toString();
+    }
+
+    private String shorten(String s, int max) {
+        if (s.length() <= max) {
+            return s;
+        }
+        return s.substring(0, max - 1) + "…";
+    }
+
+    private String pedestrian(String s) {
+        return s.replaceAll("(?i)utilize", "use").replaceAll("(?i)deliverable", "result");
+    }
+
+    private String microSummary(String s) {
+        String[] parts = s.split("\\s+");
+        int keep = Math.min(8, parts.length);
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < keep; i++) {
+            sb.append(parts[i]).append(' ');
+        }
+        return sb.toString().trim();
+    }
+
+    private void seedLocales() {
