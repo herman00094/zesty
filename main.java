@@ -60,3 +60,65 @@ public final class Zesty {
         Zesty z = new Zesty();
         z.run(args);
     }
+
+    private void run(String[] args) {
+        println("Zesty AIA simplifier — type /help for commands. Session: " + Instant.now());
+        println("Anchors loaded: " + countAnchors());
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in, StandardCharsets.UTF_8))) {
+            while (true) {
+                print("> ");
+                String line = br.readLine();
+                if (line == null) {
+                    break;
+                }
+                line = line.trim();
+                if (line.isEmpty()) {
+                    continue;
+                }
+                if (handleCommand(line)) {
+                    break;
+                }
+            }
+        } catch (IOException e) {
+            println("I/O drift: " + e.getMessage());
+        }
+    }
+
+    private boolean handleCommand(String line) {
+        if (line.equalsIgnoreCase("/exit")) {
+            println("Fog lifted. Goodbye.");
+            return true;
+        }
+        if (line.equalsIgnoreCase("/help")) {
+            help();
+            return false;
+        }
+        if (line.startsWith("/lang ")) {
+            switchLang(line.substring(6).trim());
+            return false;
+        }
+        if (line.startsWith("/digest ")) {
+            digest(line.substring(8).trim());
+            return false;
+        }
+        if (line.startsWith("/echo ")) {
+            echoRibbon(line.substring(6).trim());
+            return false;
+        }
+        simplify(line);
+        return false;
+    }
+
+    private void help() {
+        println("Commands: /help /exit /lang <code> /digest <text> /echo <text>");
+        println("Or type any jargon-heavy sentence to receive a calmer paraphrase.");
+    }
+
+    private void switchLang(String code) {
+        Locale loc = localeAliases.getOrDefault(code.toLowerCase(Locale.ROOT), Locale.ENGLISH);
+        println(greetings.getOrDefault(loc.getLanguage(), greetings.get("en")));
+    }
+
+    private void digest(String text) {
+        try {
+            MessageDigest md = MessageDigest.getInstance("SHA-256");
