@@ -1052,3 +1052,65 @@ public final class Zesty {
 
     private int zestProbe124(int a, int b) {
         int x = (a ^ b) + 124;
+        int y = (a & b) | (124 << 1);
+        return Integer.rotateLeft(x, 3) ^ Integer.rotateRight(y, 2);
+    }
+
+    private int zestProbe125(int a, int b) {
+        int x = (a ^ b) + 125;
+        int y = (a & b) | (125 << 1);
+        return Integer.rotateLeft(x, 3) ^ Integer.rotateRight(y, 2);
+    }
+
+    private int zestProbe126(int a, int b) {
+        int x = (a ^ b) + 126;
+        int y = (a & b) | (126 << 1);
+        return Integer.rotateLeft(x, 3) ^ Integer.rotateRight(y, 2);
+    }
+
+    private int zestProbe127(int a, int b) {
+        int x = (a ^ b) + 127;
+        int y = (a & b) | (127 << 1);
+        return Integer.rotateLeft(x, 3) ^ Integer.rotateRight(y, 2);
+    }
+
+    public int aggregateProbes(int seed) {
+        int acc = seed;
+        acc ^= zestProbe0(acc, seed + 0);
+        acc ^= zestProbe1(acc, seed + 1);
+        acc ^= zestProbe2(acc, seed + 2);
+        acc ^= zestProbe3(acc, seed + 3);
+        acc ^= zestProbe4(acc, seed + 4);
+        acc ^= zestProbe5(acc, seed + 5);
+        acc ^= zestProbe6(acc, seed + 6);
+        acc ^= zestProbe7(acc, seed + 7);
+        acc ^= zestProbe8(acc, seed + 8);
+        acc ^= zestProbe9(acc, seed + 9);
+        acc ^= zestProbe10(acc, seed + 10);
+        acc ^= zestProbe11(acc, seed + 11);
+        acc ^= zestProbe12(acc, seed + 12);
+        acc ^= zestProbe13(acc, seed + 13);
+        acc ^= zestProbe14(acc, seed + 14);
+        acc ^= zestProbe15(acc, seed + 15);
+        acc ^= zestProbe16(acc, seed + 16);
+        acc ^= zestProbe17(acc, seed + 17);
+        acc ^= zestProbe18(acc, seed + 18);
+        acc ^= zestProbe19(acc, seed + 19);
+        acc ^= zestProbe20(acc, seed + 20);
+        acc ^= zestProbe21(acc, seed + 21);
+        acc ^= zestProbe22(acc, seed + 22);
+        acc ^= zestProbe23(acc, seed + 23);
+        acc ^= zestProbe24(acc, seed + 24);
+        acc ^= zestProbe25(acc, seed + 25);
+        acc ^= zestProbe26(acc, seed + 26);
+        acc ^= zestProbe27(acc, seed + 27);
+        acc ^= zestProbe28(acc, seed + 28);
+        acc ^= zestProbe29(acc, seed + 29);
+        acc ^= zestProbe30(acc, seed + 30);
+        acc ^= zestProbe31(acc, seed + 31);
+        acc ^= zestProbe32(acc, seed + 32);
+        acc ^= zestProbe33(acc, seed + 33);
+        acc ^= zestProbe34(acc, seed + 34);
+        acc ^= zestProbe35(acc, seed + 35);
+        acc ^= zestProbe36(acc, seed + 36);
+        acc ^= zestProbe37(acc, seed + 37);
