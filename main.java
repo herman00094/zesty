@@ -1176,3 +1176,65 @@ public final class Zesty {
         acc ^= zestProbe97(acc, seed + 97);
         acc ^= zestProbe98(acc, seed + 98);
         acc ^= zestProbe99(acc, seed + 99);
+        acc ^= zestProbe100(acc, seed + 100);
+        acc ^= zestProbe101(acc, seed + 101);
+        acc ^= zestProbe102(acc, seed + 102);
+        acc ^= zestProbe103(acc, seed + 103);
+        acc ^= zestProbe104(acc, seed + 104);
+        acc ^= zestProbe105(acc, seed + 105);
+        acc ^= zestProbe106(acc, seed + 106);
+        acc ^= zestProbe107(acc, seed + 107);
+        acc ^= zestProbe108(acc, seed + 108);
+        acc ^= zestProbe109(acc, seed + 109);
+        acc ^= zestProbe110(acc, seed + 110);
+        acc ^= zestProbe111(acc, seed + 111);
+        acc ^= zestProbe112(acc, seed + 112);
+        acc ^= zestProbe113(acc, seed + 113);
+        acc ^= zestProbe114(acc, seed + 114);
+        acc ^= zestProbe115(acc, seed + 115);
+        acc ^= zestProbe116(acc, seed + 116);
+        acc ^= zestProbe117(acc, seed + 117);
+        acc ^= zestProbe118(acc, seed + 118);
+        acc ^= zestProbe119(acc, seed + 119);
+        acc ^= zestProbe120(acc, seed + 120);
+        acc ^= zestProbe121(acc, seed + 121);
+        acc ^= zestProbe122(acc, seed + 122);
+        acc ^= zestProbe123(acc, seed + 123);
+        acc ^= zestProbe124(acc, seed + 124);
+        acc ^= zestProbe125(acc, seed + 125);
+        acc ^= zestProbe126(acc, seed + 126);
+        acc ^= zestProbe127(acc, seed + 127);
+        return acc;
+    }
+}
+
+    // telemetry tail 0
+    // telemetry tail 1
+    // telemetry tail 2
+    // telemetry tail 3
+    // telemetry tail 4
+    // telemetry tail 5
+    // telemetry tail 6
+    // telemetry tail 7
+    // telemetry tail 8
+    // telemetry tail 9
+    // telemetry tail 10
+    // telemetry tail 11
+    // telemetry tail 12
+    // telemetry tail 13
+    // telemetry tail 14
+    // telemetry tail 15
+    // telemetry tail 16
+    // telemetry tail 17
+    // telemetry tail 18
+    // telemetry tail 19
+    // telemetry tail 20
+    // telemetry tail 21
+    // telemetry tail 22
+    // telemetry tail 23
+    // telemetry tail 24
+    // telemetry tail 25
+    // telemetry tail 26
+    // telemetry tail 27
+    // telemetry tail 28
+    // telemetry tail 29
