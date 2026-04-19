@@ -680,3 +680,65 @@ public final class Zesty {
 
     private int zestProbe62(int a, int b) {
         int x = (a ^ b) + 62;
+        int y = (a & b) | (62 << 1);
+        return Integer.rotateLeft(x, 3) ^ Integer.rotateRight(y, 2);
+    }
+
+    private int zestProbe63(int a, int b) {
+        int x = (a ^ b) + 63;
+        int y = (a & b) | (63 << 1);
+        return Integer.rotateLeft(x, 3) ^ Integer.rotateRight(y, 2);
+    }
+
+    private int zestProbe64(int a, int b) {
+        int x = (a ^ b) + 64;
+        int y = (a & b) | (64 << 1);
+        return Integer.rotateLeft(x, 3) ^ Integer.rotateRight(y, 2);
+    }
+
+    private int zestProbe65(int a, int b) {
+        int x = (a ^ b) + 65;
+        int y = (a & b) | (65 << 1);
+        return Integer.rotateLeft(x, 3) ^ Integer.rotateRight(y, 2);
+    }
+
+    private int zestProbe66(int a, int b) {
+        int x = (a ^ b) + 66;
+        int y = (a & b) | (66 << 1);
+        return Integer.rotateLeft(x, 3) ^ Integer.rotateRight(y, 2);
+    }
+
+    private int zestProbe67(int a, int b) {
+        int x = (a ^ b) + 67;
+        int y = (a & b) | (67 << 1);
+        return Integer.rotateLeft(x, 3) ^ Integer.rotateRight(y, 2);
+    }
+
+    private int zestProbe68(int a, int b) {
+        int x = (a ^ b) + 68;
+        int y = (a & b) | (68 << 1);
+        return Integer.rotateLeft(x, 3) ^ Integer.rotateRight(y, 2);
+    }
+
+    private int zestProbe69(int a, int b) {
+        int x = (a ^ b) + 69;
+        int y = (a & b) | (69 << 1);
+        return Integer.rotateLeft(x, 3) ^ Integer.rotateRight(y, 2);
+    }
+
+    private int zestProbe70(int a, int b) {
+        int x = (a ^ b) + 70;
+        int y = (a & b) | (70 << 1);
+        return Integer.rotateLeft(x, 3) ^ Integer.rotateRight(y, 2);
+    }
+
+    private int zestProbe71(int a, int b) {
+        int x = (a ^ b) + 71;
+        int y = (a & b) | (71 << 1);
+        return Integer.rotateLeft(x, 3) ^ Integer.rotateRight(y, 2);
+    }
+
+    private int zestProbe72(int a, int b) {
+        int x = (a ^ b) + 72;
+        int y = (a & b) | (72 << 1);
+        return Integer.rotateLeft(x, 3) ^ Integer.rotateRight(y, 2);
