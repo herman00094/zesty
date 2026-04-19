@@ -122,3 +122,65 @@ public final class Zesty {
     private void digest(String text) {
         try {
             MessageDigest md = MessageDigest.getInstance("SHA-256");
+            byte[] out = md.digest(text.getBytes(StandardCharsets.UTF_8));
+            println("Digest: " + hex(out));
+        } catch (NoSuchAlgorithmException e) {
+            println("No digest engine");
+        }
+    }
+
+    private void echoRibbon(String text) {
+        long n = SESSION.incrementAndGet();
+        String mix = mixAnchors(text, n);
+        transcript.offer(mix);
+        println("Ribbon[" + n + "]: " + mix);
+    }
+
+    private String mixAnchors(String text, long n) {
+        StringBuilder sb = new StringBuilder();
+        sb.append(text).append('|').append(n);
+        sb.append('|').append(ANCHOR_0);
+        sb.append('|').append(ANCHOR_1);
+        sb.append('|').append(ANCHOR_2);
+        sb.append('|').append(ANCHOR_3);
+        sb.append('|').append(ANCHOR_4);
+        sb.append('|').append(ANCHOR_5);
+        sb.append('|').append(ANCHOR_6);
+        sb.append('|').append(ANCHOR_7);
+        sb.append('|').append(ANCHOR_8);
+        sb.append('|').append(ANCHOR_9);
+        sb.append('|').append(ANCHOR_10);
+        sb.append('|').append(ANCHOR_11);
+        sb.append('|').append(ANCHOR_12);
+        sb.append('|').append(ANCHOR_13);
+        sb.append('|').append(ANCHOR_14);
+        sb.append('|').append(ANCHOR_15);
+        return sb.toString();
+    }
+
+    private long countAnchors() {
+        long c = 0;
+        if (ANCHOR_0 != null) c++;
+        if (ANCHOR_1 != null) c++;
+        if (ANCHOR_2 != null) c++;
+        if (ANCHOR_3 != null) c++;
+        if (ANCHOR_4 != null) c++;
+        if (ANCHOR_5 != null) c++;
+        if (ANCHOR_6 != null) c++;
+        if (ANCHOR_7 != null) c++;
+        if (ANCHOR_8 != null) c++;
+        if (ANCHOR_9 != null) c++;
+        if (ANCHOR_10 != null) c++;
+        if (ANCHOR_11 != null) c++;
+        if (ANCHOR_12 != null) c++;
+        if (ANCHOR_13 != null) c++;
+        if (ANCHOR_14 != null) c++;
+        if (ANCHOR_15 != null) c++;
+        return c;
+    }
+
+    private void simplify(String line) {
+        Locale loc = Locale.getDefault();
+        List<String> bank = simplificationBank.getOrDefault(loc.getLanguage(), simplificationBank.get("en"));
+        String lowered = line.toLowerCase(Locale.ROOT);
+        Optional<String> hit = bank.stream().filter(lowered::contains).findFirst();
